@@ -1,0 +1,32 @@
+
+
+ <div class="container" ng-controller="EventCtrl">
+  <table class="table">
+      <thead>
+        <tr>
+          <th>Date</th>         
+          <th>Title</th>
+          <th>Location</th>
+          <th> --</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="evnt in eventlist">
+          <td>{{evnt.dateiso | date:'M-dd-yyyy'}}</td>
+          <td>{{evnt.title}}</td>
+          <td>{{evnt.location}}</td>
+         
+        <td>
+             <a href="#/edit/{{evnt._id}}" class="btn btn-info" >Edit</a>&nbsp;&nbsp;
+             <button class="btn btn-danger" ng-click="remove(evnt._id)">Delete</button>&nbsp;&nbsp;
+           </td>
+        </tr>
+        <tr>
+          <td> <button class="btn btn-primary" ng-click="showAdd()"> ADD EVENT</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+ 

@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="row">
+		<div>
+        
+            <!-- Fluid width widget -->        
+    	    <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-calendar"></span> 
+                        Upcoming Events
+                    </h3>
+                </div>
+                <div class="panel-body" ng-controller="EventCtrl">
+                    <ul class="media-list">
+                        <li class="media"  ng-repeat="evnt in eventlist">
+                            <a href="#/view/{{evnt._id}}" class="link">
+                            <div class="media-left">
+                                <div class="panel panel-success text-center date">
+                                    <div class="panel-heading month">
+                                        <span class="panel-title strong">
+                                            {{evnt.dateiso | date:'MMM'}}
+                                        </span>
+                                    </div>
+                                    <div class="panel-body text-success day">
+                                         {{evnt.dateiso | date:'dd'}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    {{evnt.title}}
+                                </h4>
+                                <p>
+                                    {{evnt.details}}
+                                </p>
+                            </div>
+                            <div class="media-right">
+                            	<span class="glyphicon glyphicon-chevron-right"></span>
+                            </div>
+                        </a></li>
+                    </ul>
+                  
+                </div>
+            </div>
+            <!-- End fluid width widget --> 
+            
+		</div>
+	</div>
+</div>

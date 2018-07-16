@@ -1,0 +1,46 @@
+
+
+<div class="panel panel-success" ng-controller="EventMgrCtrl">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        {{evnt.title}} 
+                    </h3>
+                </div>
+
+<ul class="media-list">
+                        
+                           <!-- <div class="media-left">
+                                <div class="panel panel-success text-center date">
+                                    <div class="panel-heading month">
+                                        <span class="panel-title strong">
+                                            {{evnt.dateiso | date:'MMM'}}
+                                        </span>
+                                    </div>
+                                    <div class="panel-body text-success day">
+                                         {{evnt.dateiso | date:'dd'}}
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="media-body">
+                               <table class="table">
+                                <tr>
+                                 <th><span class="glyphicon glyphicon-calendar"></span> </th><th><b>When:</b></th> <td> {{evnt.dateiso | date:'MMM dd yyyy @ hh:mm'}}</td> </tr>
+                                 <th><span class="glyphicon glyphicon-flash"></span> </th><th><b>Venue:</b> </th> <td>{{evnt.location}} </td></tr>
+                                 <th><span class="glyphicon glyphicon-pushpin"></span></th><th>Address: </th><td>{{evnt.address}} </td></tr>
+                               
+                              <th><span class="glyphicon glyphicon-globe"></span></th><th>Map:</th><td><a href="{{evnt.map}}" target="_new"> Google&reg; Map </a></td></tr>
+
+                                <tr><td colspan="3"><p class="panel-body">
+                                    {{evnt.details}}
+                                </p>
+                                  </td></tr>
+                              </table>
+                            </div>
+                            
+                        </li>
+        </ul>
+        <a class="btn btn-success" onclick="history.go(-1);" href="/"> Back </a>
+        <a class="btn btn-warning" href="{{evnt.url}}" target=_new> Register </a>
+
+</div>

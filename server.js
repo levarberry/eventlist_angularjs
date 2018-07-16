@@ -53,10 +53,3 @@ app.put('/eventlist/:id', function (req, res) {
 });
 
 app.listen(3000);
-
-Select Distinct  FROM 
-WHERE bucketdate = 
-
-<asp:dropdownlist id="fltrFabric100" runat="server" DataSourceID="sqlFabric100">
-
-</asp:dropdownlist>
